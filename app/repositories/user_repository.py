@@ -3,9 +3,9 @@ from app.models.user import User
 
 class UserRepository: # interactua con la bd
     def create(self, db: Session, user : User):
-        db.add(user)
-        db.commit()
-        db.refresh(user)
+        db.add(user) # agrega al usuario
+        db.commit() # confirma la transaccion, guarda los cambios en la base de datos
+        db.refresh(user) # refresca el objeto user para obtener los datos actualizados de la base de datos, como el id generado automáticamente
         return user
     
 
