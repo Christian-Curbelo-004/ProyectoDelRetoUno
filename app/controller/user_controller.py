@@ -15,7 +15,7 @@ def get_db():
         db.close()
         
         
-@router.post("/",c) 
+@router.post("/",) 
 
  # data (nombre del parametro que recibira los datos del usuario): UserCreate (define los campos de JSON, esto es de pydantic) >>> db: nombre del parametro que tendra la sesion de db
  # Session indica que sera una db
